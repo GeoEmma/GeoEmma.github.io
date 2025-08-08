@@ -1,2 +1,2 @@
 # GeoEmma.github.io
-Online CV
+Online short CV with small map gallery

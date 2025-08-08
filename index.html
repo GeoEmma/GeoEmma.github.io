@@ -42,7 +42,7 @@
         background: #555;
       }
       .map-item {
-        flex: 0 0 300px;
+        flex: 0 0 400px;
         cursor: pointer;
         transition: transform 0.3s ease;
       }
@@ -51,17 +51,29 @@
       }
       .map-item img {
         width: 100%;
-        height: 200px;
+        height: 300px;
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       }
       .map-title {
         text-align: center;
-        margin-top: 10px;
+        margin-top: 20px;
         font-weight: 600;
+		font-size: 20px;
         color: #333;
       }
+
+		#portfolio {
+  padding: 80px 0; /* Add more vertical space */
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* Subtle background */
+}
+
+#portfolio .h4 {
+  font-size: 2.5rem; /* Larger title */
+  margin-bottom: 50px;
+}
+		
       .modal-body img {
         width: 100%;
         height: auto;
@@ -287,36 +299,50 @@
       
      <!--  NEW MAP GALLERY SECTION  -->
 <div class="section" id="portfolio">
+	<div class="row">
+      <div class="col-md-6 ml-auto mr-auto">
+        <div class="h4 text-center mb-4 title">Map Gallery</div>
+        <div class="nav-align-center">
+          <ul class="nav nav-pills nav-pills-primary" role="tablist">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#maps-display" role="tablist"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content gallery mt-5">
+      <div class="tab-pane active" id="maps-display">
+        <div class="ml-auto mr-auto">
+          <div class="map-gallery" data-aos="fade-up">
   <div class="container">
     <div class="h4 text-center mb-4 title">Map Gallery</div>
     <div class="map-gallery" data-aos="fade-up">
       <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/womengeo_collab.jpg" data-title="Women+ in Geospatial map collaboration" data-description="Collaborative project during the 2022, 30DayMapChallenge, showcasing multiple contributions to a global map of members of Women+Geo who work in geography and spatial science.">
         <img src="images/womengeo_collab.jpg" alt="Women+ in Geospatial collaboration">
-        <div class="map-title">Women in Geography</div>
+        <div class="map-title">Women+ in Geospatial collab</div>
       </div>
-      <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/PlantRangeShifts.jpg" data-title="Plant range shift studies" data-description="Visualisation of plant species range shift studies due to climate change and environmental factors. This map represents a static version of a wider piece of research (a 'systematic map' as part of my PhD to understand knowledge and geographical gaps and clusters in vegetation range shift research). Web version: https://syst-map-plant-range-shifts.github.io/.">
+      <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/PlantRangeShifts.jpg" data-title="Plant range shift studies" data-description="Visualisation of plant species range shift studies due to climate change and environmental factors. This map represents a static version of a wider piece of research (a 'systematic map' as part of my PhD to understand knowledge and geographical gaps and clusters in vegetation range shift research). <a href="https://syst-map-plant-range-shifts.github.io/">Web version here.</a></p>
         <img src="images/PlantRangeShifts.jpg" alt="Plant range shift studies">
-        <div class="map-title">Plant Range Shifts</div>
+        <div class="map-title">Plant range shift studies</div>
       </div>
       <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/Mapaction.jpg" data-title="MapAction map example" data-description="My contribution to wider MapAction humanitarian mapping efforts for emergency response during the 2022 cyclones in Madagascar.">
         <img src="images/Mapaction.jpg" alt="MapAction response example in Madagascar">
-        <div class="map-title">MapAction Project</div>
+        <div class="map-title">MapAction support example</div>
       </div>
       <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/LDcycleroutes.jpg" data-title="Long-distance cycle routes in Europe" data-description="Map of long-distance cycling infrastructure across Europe submitted as part of the 30DayMapChallenge (2022).">
         <img src="images/LDcycleroutes.jpg" alt="Long-distance cycle routes">
-        <div class="map-title">EU Cycle Routes</div>
+        <div class="map-title">EU Long-distance cycle routes</div>
       </div>
       <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/PopDens_mada.jpg" data-title="Population Density comparison" data-description="Population density analysis and visualisation for Antananarivo, Madagascar and Greater London, UK.">
         <img src="images/PopDens_mada.jpg" alt="Madagascar and London Population Density">
-        <div class="map-title">Madagascar Population</div>
+        <div class="map-title">Madagascar vs London population</div>
       </div>
       <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/Bris_Popdens.jpg" data-title="Bristol Population Density" data-description="Urban population density mapping and analysis for Bristol, UK.">
         <img src="images/Bris_Popdens.jpg" alt="Bristol Population Density">
-        <div class="map-title">Bristol Population</div>
+        <div class="map-title">Bristol, UK Population</div>
       </div>
       <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/Urbanscape_connectivity.jpg" data-title="Urbanscape Connectivity" data-description="Analysis of ecological connectivity within urban landscapes (Bristol, UK) for wildlife conservation.">
         <img src="images/Urbanscape_connectivity.jpg" alt="Urbanscape Connectivity">
-        <div class="map-title">Urban Connectivity</div>
+        <div class="map-title">Urbanscape Connectivity</div>
       </div>
       <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/GlobalAgriLands.jpg" data-title="Global Agricultural Lands" data-description="Global thematic map of agricultural land use patterns.">
         <img src="images/GlobalAgriLands.jpg" alt="Global Agricultural Lands">
@@ -324,11 +350,13 @@
       </div>
       <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/Blines.jpg" data-title="B-Lines Pollinator Corridors" data-description="Mapping pollinator corridors 'B-Lines' for biodiversity conservation dissemination.">
         <img src="images/Blines.jpg" alt="B-Lines Pollinator Corridors">
-        <div class="map-title">B-Lines Corridors</div>
+        <div class="map-title">"B-Lines" Corridors</div>
       </div>
       <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/WENP_network.jpg" data-title="WENP Network Analysis" data-description="West of England Nature Partnership (WENP) ecological corridors and their connectivity.">
         <img src="images/WENP_network.jpg" alt="WENP Network Analysis">
         <div class="map-title">WENP Network</div>
+ 			</div>
+        </div>
       </div>
     </div>
   </div>
@@ -378,7 +406,7 @@
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
-            <p>September 2023 - Present</p>
+            <p>September 2023 - 2025</p>
             <div class="h5">University of Potsdam</div>
           </div>
         </div>
@@ -388,6 +416,7 @@
               <div class="experience-text">
                 <div class="h5">Research Assistant (Part-time)</div>
                 <p>Supporting the EU-funded project <a href="https://birdwatch-europe.org/project/">BirdWatch</a> within the <a href="https://damariszurell.github.io/">Ecology/Macroecology Lab.</a></p>
+				  <p>Masters level Remote sensing & GIS teaching support.</a></p>
               </div>
               <img src="images/macroteam.png" alt="Macroecology Team" class="experience-thumbnail" onclick="openThumbnailModal('images/macroteam.png', 'Macroecology Lab Team')">
             </div>
@@ -408,7 +437,7 @@
             <div class="experience-content">
               <div class="experience-text">
                 <div class="h5">GIS Support & Deployment Volunteer (Part-time)</div>
-                <p><a href="https://mapaction.org/about-us/">MapAction</a> is a UK based Humanitarian mapping charity which undertake emergency missions worldwide, without fee. I use my GIS skills to support emergency data collection, visualisations and analysis, both remote and in the field. #GISforGood</p>
+                <p><a href="https://mapaction.org/about-us/">MapAction</a> is a UK based, internationally focused, Humanitarian mapping charity which undertake emergency missions worldwide, without fee. I use my GIS skills to support emergency data collection, visualisations and analysis, both remote and in the field. #GISforGood</p>
               </div>
               <img src="images/mapaction_photo.jpg" alt="MapAction" class="experience-thumbnail" onclick="openThumbnailModal('images/mapaction_photo.jpg', 'MapAction Volunteer Work')">
             </div>
@@ -459,7 +488,7 @@
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
             <div class="h5">GIS Specialist</div>
-            <p>Technical support to the planning and development team at the worlds first green energy company. Other internal roles included: Academy trainer, Community Liaison and IS09001 Quality Manager.</p>
+            <p>Technical and visualisation support to the planning and development team at the worlds first green energy company, Ecotricity. Other internal roles included: Academy trainer, Community Liaison and IS09001 Quality Manager.</p>
           </div>
         </div>
       </div>
@@ -512,7 +541,7 @@
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5">Master of Applied Science</div>
+            <div class="h5">Master of Applied Science (Ecological modelling) </div>
             <p class="category">University of the West of England</p>
             <p>Thesis title: "Re-wilding the City: Using Circuitscape as a Tool to Assess the Effectiveness of Urbanscape Conservation Mitigation Strategies". Main skills developed: Predictive Modeling · Research · R (Programming Language). Awards: Esri User Conference Map Gallery Winner of category "Communicating Science Spatially", San Diego, USA (2020). </p>
           </div>

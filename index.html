@@ -68,14 +68,29 @@
         border-radius: 8px;
       }
       .experience-thumbnail {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
         object-fit: cover;
         border-radius: 50%;
         float: right;
-        margin-left: 15px;
+        margin: 0 0 15px 20px;
         border: 3px solid #fff;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+      }
+      .experience-thumbnail:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      }
+      .experience-content {
+        display: flex;
+        align-items: flex-start;
+      }
+      .experience-text {
+        flex: 1;
+        padding-right: 15px;
       }
     </style>
   </head>
@@ -340,6 +355,23 @@
   </div>
 </div>
 
+<!-- Modal for Thumbnail Images -->
+<div class="modal fade" id="thumbnailModal" tabindex="-1" role="dialog" aria-labelledby="thumbnailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="thumbnailModalLabel">Image</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="thumbnailModalImage" src="" alt="Thumbnail Image" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="section" id="experience">
   <div class="container cc-experience">
     <div class="h4 text-center mb-4 title">Work Experience</div>
@@ -347,15 +379,19 @@
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
-            <p>September 2023 - 2025</p>
+            <p>September 2023 - Present</p>
             <div class="h5">University of Potsdam</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-			  <img src="images/macroteam.png" alt="Macroecology Team" class="experience-thumbnail" data-toggle="modal" data-target="#thumbnailModal" data-image="images/macroteam.png" data-title="Macroecology Lab Team">
-            <div class="h5">Research Assistant (Part-time)</div>
-            <p>Supporting the EU-funded project <a href="https://birdwatch-europe.org/project/">BirdWatch</a> within the <a href="https://damariszurell.github.io/">Ecology/Macroecology Lab.</a></p>
+            <div class="experience-content">
+              <div class="experience-text">
+                <div class="h5">Research Assistant (Part-time)</div>
+                <p>Supporting the EU-funded project <a href="https://birdwatch-europe.org/project/">BirdWatch</a> within the <a href="https://damariszurell.github.io/">Ecology/Macroecology Lab.</a></p>
+              </div>
+              <img src="images/macroteam.png" alt="Macroecology Team" class="experience-thumbnail" onclick="openThumbnailModal('images/macroteam.png', 'Macroecology Lab Team')">
+            </div>
           </div>
         </div>
       </div>
@@ -370,22 +406,17 @@
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <img src="images/mapaction_photo.jpg" alt="MapAction" class="experience-thumbnail">
-            <div class="h5">GIS Support & Deployment Volunteer (Part-time)</div>
-            <p><a href="https://mapaction.org/about-us/">MapAction</a> is a UK based, internationally focused, humanitarian mapping charity which undertake emergency missions worldwide, without fee. I use my GIS skills to support emergency data collection, visualisations and analysis, both remote and in the field. #GISforGood</p>
+            <div class="experience-content">
+              <div class="experience-text">
+                <div class="h5">GIS Support & Deployment Volunteer (Part-time)</div>
+                <p><a href="https://mapaction.org/about-us/">MapAction</a> is a UK based Humanitarian mapping charity which undertake emergency missions worldwide, without fee. I use my GIS skills to support emergency data collection, visualisations and analysis, both remote and in the field. #GISforGood</p>
+              </div>
+              <img src="images/mapaction_photo.jpg" alt="MapAction" class="experience-thumbnail" onclick="openThumbnailModal('images/mapaction_photo.jpg', 'MapAction Volunteer Work')">
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-          <div class="card-body cc-experience-header">
-            <p>May 2020 - August 2023</p>
-            <div class="h5">University of Freiburg</div>
-          </div>
-        </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
             <div class="h5">GIS Lecturer (External, freelance)</div>
             <p>Designed and delivered an introductory GIS lecture and a practical/demo class to students enrolled in the Conservation of Forest Biology (<a href="https://confobi.uni-freiburg.de/en">ConFoBi</a>) Research Training Group Masters course.</p>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Emma Underwood CV</title>
+    <title>MY NAME CV</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/aos.css?ver=1.1.0" rel="stylesheet">
@@ -18,20 +18,81 @@
         }
       </style>
     </noscript>
+    <style>
+      /* Custom styles for map gallery */
+      .map-gallery {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding: 20px 0;
+        scroll-behavior: smooth;
+      }
+      .map-gallery::-webkit-scrollbar {
+        height: 8px;
+      }
+      .map-gallery::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+      .map-gallery::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
+      .map-gallery::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      .map-item {
+        flex: 0 0 300px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      .map-item:hover {
+        transform: scale(1.05);
+      }
+      .map-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      .map-title {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: 600;
+        color: #333;
+      }
+      .modal-body img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .experience-thumbnail {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 50%;
+        float: right;
+        margin-left: 15px;
+        border: 3px solid #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+    </style>
   </head>
   <body id="top">
     <header>
       <div class="profile-page sidebar-collapse">
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
           <div class="container">
-            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">Emma Underwood CV</a>
+            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">Emma L Underwood (version: short CV and map gallery)</a>
               <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
             </div>
             <div class="collapse navbar-collapse justify-content-end" id="navigation">
               <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link smooth-scroll" href="#scicomm">Science in the media</a></li>
+		<li class="nav-item"><a class="nav-link smooth-scroll" href="#maps-gallery">Map gallery</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
               </ul>
@@ -49,7 +110,7 @@
       <div class="container">
         <div class="content-center">
           <div class="cc-profile-image"><a href="#"><img src="images/emma.jpg" alt="Image"/></a></div>
-          <div class="h2 title">Emma Underwood</div>
+          <div class="h2 title">Emma L Underwood</div>
           <p class="category text-white">👩‍🔬Ecological Modeller | 🌍GIS Specialist | 🌿Biodiversity Conservation </p><a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Message Me</a><a class="btn btn-primary" href="/images/EmmaUnderwoodCV_github.png" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
         </div>
       </div>
@@ -58,9 +119,6 @@
         <div class="button-container">
             <a class="btn btn-default btn-round btn-lg btn-icon" href="https://bsky.appgeospatialemma.bsky.social" rel="tooltip" title="Follow me on Bluesky">
                 <img src="images/bluesky-social-logo.png" alt="Bluesky" style="width: 18px; height: 18px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 1;">
-            </a>
-            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.instagram.com/geospatialemma" rel="tooltip" title="Follow me on Instagram">
-                <i class="fa fa-instagram"></i>
             </a>
             <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.linkedin.com/in/emmaunderwood01/" rel="tooltip" title="Follow me on LinkedIn">
                 <i class="fa fa-linkedin"></i>
@@ -78,7 +136,7 @@
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
             <div class="h4 mt-0 title">About</div>
-            <p>Hello! I am Emma Underwood. My pronouns are she/her. </p>
+            <p>Hello! I am Emma L Underwood. My pronouns are she/her. </p>
             <p>Most would describe me as a map-maker and passionate environmentalist. My particular niche of geospatial skills place me at the intersection of ecology, spatial analysis, and conservation. I am developing skills as a spatial ecologist, with a keen interest in ecological modelling. My current research focus is in disentangling the local and global change drivers leading plants to shift their ranges in time and space.</p>
           </div>
         </div>
@@ -160,14 +218,14 @@
     </div>
   </div>
 </div>
-<div class="section" id="portfolio">
+<div class="section" id="scicomm">
   <div class="container">
     <div class="row">
       <div class="col-md-6 ml-auto mr-auto">
-        <div class="h4 text-center mb-4 title">Portfolio</div>
+        <div class="h4 text-center mb-4 title">Science in the media</div>
         <div class="nav-align-center">
           <ul class="nav nav-pills nav-pills-primary" role="tablist">
-            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#web-development" role="tablist"><i class="fa fa-laptop" aria-hidden="true"></i></a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#maps-gallery" role="tablist"><i class="fa fa-map" aria-hidden="true"></i></a></li>
           </ul>
         </div>
       </div>
@@ -211,6 +269,51 @@
           </div>
         </div>
       </div>
+      
+      <!-- New Maps Gallery Tab -->
+      <div class="tab-pane" id="maps-gallery">
+        <div class="ml-auto mr-auto">
+          <div class="h5 text-center mb-4">Map Gallery</div>
+          <div class="map-gallery" data-aos="fade-up">
+            <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/womengeo_collab.jpg" data-title="Women in Geospatial+ map collaboration" data-description="Collaborative project during the 2022, 30DayMapChallenge, showcasing multiple contributions to a global map of members of Women+Geo who work in geography and spatial science.">
+              <img src="images/womengeo_collab.jpg" alt="Women in Geospatial+ collaboration">
+              <div class="map-title">Women in Geography</div>
+            </div>
+            <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/PlantRangeShifts.jpg" data-title="Plant range shift studies" data-description="Visualisation of plant species range shift studies due to climate change and environmental factors. This map represents a static version of a wider piece of research (a "systematic map" as part of my PhD to understand knowledge and geographical gaps and clusters in vegetation range shift research). Web version: https://syst-map-plant-range-shifts.github.io/.">
+              <img src="images/PlantRangeShifts.jpg" alt="Plant range shift studies">
+              <div class="map-title">Plant Range Shifts</div>
+            </div>
+            <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/MapAction.jpg" data-title="MapAction map example" data-description="My contribution to wider MapAction humanitarian mapping efforts for emergency response during the 2022 cyclones in Madagascar.">
+              <img src="images/MapAction.jpg" alt="MapAction Project example">
+              <div class="map-title">MapAction Project</div>
+            </div>
+            <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/LDcycleroutes.jpg" data-title="Long-distance cycle routes in Europe" data-description="Map of long-distance cycling infrastructure across Europe submitted as part of the 30DayMapChallenge (2022).">
+              <img src="images/LDcycleroutes.jpg" alt="Long-distance cycle routes">
+              <div class="map-title">London Cycle Routes</div>
+            </div>
+            <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/PopDens_mada.jpg" data-title="Population Density comparison" data-description="Population density analysis and visualisation for Antananarivo, Madagascar and Greater London.">
+              <img src="images/PopDens_mada.jpg" alt="Madagascar and London Population Density">
+              <div class="map-title">Madagascar Population</div>
+            </div>
+            <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/Bris_Popdens.jpg" data-title="Bristol Population Density" data-description="Urban population density mapping and analysis for Bristol, UK.">
+              <img src="images/Bris_Popdens.jpg" alt="Bristol Population Density">
+              <div class="map-title">Bristol Population</div>
+            </div>
+            <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/Urbanscape_connectivity.jpg" data-title="Urbanscape Connectivity" data-description="Analysis of ecological connectivity within urban landscapes (Bristol, UK) for wildlife conservation.">
+              <img src="images/Urbanscape_connectivity.jpg" alt="Urbanscape Connectivity">
+              <div class="map-title">Urban Connectivity</div>
+            </div>
+            <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/GlobalAgriLands.jpg" data-title="Global Agricultural Lands" data-description="Global thematic map of agricultural land use patterns.">
+              <img src="images/GlobalAgriLands.jpg" alt="Global Agricultural Lands">
+              <div class="map-title">Global Agriculture</div>
+            </div>
+            <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/Blines.jpg" data-title="B-Lines Pollinator Corridors" data-description="Mapping pollinator corridors "B-Lines" for biodiversity conservation dissemination.">
+              <img src="images/Blines.jpg" alt="B-Lines Pollinator Corridors">
+              <div class="map-title">B-Lines Corridors</div>
+            </div>
+            <div class="map-item" data-toggle="modal" data-target="#mapModal" data-image="images/WENP_network.jpg" data-title="WENP Network Analysis" data-description="West of England Nature Partnership (WENP) ecological corridors and their connectivity.">
+              <img src="images/WENP_network.jpg" alt="WENP Network Analysis">
+              <div class="map-title">WENP Network</div>
             </div>
           </div>
         </div>
@@ -218,6 +321,25 @@
     </div>
   </div>
 </div>
+
+<!-- Modal for Map Gallery -->
+<div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mapModalLabel">Map Title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modalImage" src="" alt="Map Image" class="img-fluid">
+        <p id="modalDescription" class="mt-3"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="section" id="experience">
   <div class="container cc-experience">
     <div class="h4 text-center mb-4 title">Work Experience</div>
@@ -247,6 +369,7 @@
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
+            <img src="images/mapaction_photo.jpg" alt="MapAction" class="experience-thumbnail">
             <div class="h5">GIS Support & Deployment Volunteer (Part-time)</div>
             <p><a href="https://mapaction.org/about-us/">MapAction</a> is a UK based Humanitarian mapping charity which undertake emergency missions worldwide, without fee. I use my GIS skills to support emergency data collection, visualisations and analysis, both remote and in the field. #GISforGood</p>
           </div>
@@ -332,7 +455,7 @@
           <div class="card-body">
             <div class="h5">Doctor of Philosophy (Environmental Biology)</div>
             <p class="category">Kingston University London</p>
-            <p>Thesis title: "Modelling the role of multiple global change drivers on future range shifts in a Biodiversity Hotspot". Study area: Madagascar. Grant funding: Full studentship until 2023; Field work funding from Royal Geographical Society (with IBG) Postgraduate Research Award with support from Albert Reckitt and Dudley Stamp Memorial Award. Main skills developed: Predictive Modeling · Research · R (Programming Language).</p>
+            <p>Thesis title: "Climate Change, Deforestation and Disease: Modelling Triple Threats to an Endemic Tree in a Tropical Biodiversity Hotspot ". Study area: Madagascar. Grant funding: Full studentship 2020-2023; Field work funding from Royal Geographical Society (with IBG) Postgraduate Research Award with support from Albert Reckitt and Dudley Stamp Memorial Award. Main skills developed: Predictive Modeling · Research · R (Programming Language).</p>
           </div>
         </div>
       </div>
@@ -471,7 +594,7 @@
                           <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                             <input class="form-control" type="email" name="email" placeholder="E-mail" required="required"/>
                           </div>
-                        </div>
+        </div>
                       </div>
                       <div class="row mb-3">
                         <div class="col">
@@ -506,8 +629,8 @@
 	<footer class="footer">
       <div class="cc-bluesky btn btn-link-center" href="#">
 	      <img src="images/bluesky-social-logo.png" alt="BlueSky Social" class="social-icon" width="32" height="32">
-	      <i class="fa fa-bluesky fa-2x " aria-hidden="true"></i></a><a class="cc-instagram btn btn-link-center" href="#"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
-      <div class="h4 title text-center">Emma Underwood</div>
+	      <i class="fa fa-bluesky fa-2x " aria-hidden="true">      
+	<div class="h4 title text-center">Emma L Underwood</div>
       <div class="text-center text-muted">
         <p>&copy; Creative CV. All rights reserved.<br>Designed with TemplateFlip<br>&copy; OpenStreetMap</p>
       </div>
@@ -518,5 +641,20 @@
     <script src="js/now-ui-kit.js?ver=1.1.0"></script>
     <script src="js/aos.js?ver=1.1.0"></script>
     <script src="scripts/main.js?ver=1.1.0"></script>
+    
+    <script>
+      // Script for Map Gallery Modal
+      $('#mapModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var image = button.data('image');
+        var title = button.data('title');
+        var description = button.data('description');
+        
+        var modal = $(this);
+        modal.find('.modal-title').text(title);
+        modal.find('#modalImage').attr('src', image);
+        modal.find('#modalDescription').text(description);
+      });
+    </script>
   </body>
 </html>
